@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+body {
+    background-color:white;
+    background-image: url("assets/img/granulated-loom.png")
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    background-color:#ffffff;
+    padding:20px;
+    margin-top:15px;
+    margin-bottom:25px;
+    border-style: double;
+    border-color:#414550;
+}
+
+.nav-top{
+    background-color:#800000;
+    border-bottom: 1px solid black;
+    color:white;
+    font-size:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.nav-bottom{
+    text-align:center;
+    margin-top:15px;
+}
+
+#div-catalog {
+    display:block;
+    overflow:scroll;
+}
+
+.foot {
+    background-color:#800000;
+    border-top: 1px solid black;
+    color:white;
+    padding-top:30px;
+    padding-bottom:30px;
+    
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+.snip1398 {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1398 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+.snip1398 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0.5em 1em;
+  overflow: hidden;
+}
+.snip1398 a {
+  padding: 0.3em 0.8em;
+  backface-visibility: hidden;
+  color: #414550;
+  display: block;
+  line-height: 2em;
+  padding: 0 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.snip1398 a:after {
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+  background-color: #800000;
+  color: transparent;
+  content: attr(data-hover);
+  left: 0;
+  line-height: 2em;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+.snip1398 li:hover a,
+.snip1398 li.current a {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  color: transparent;
+}
+.snip1398 li:hover a:after,
+.snip1398 li.current a:after {
+  opacity: 1;
+  color: #ffffff;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+hr.style17 {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
+hr.style17:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
