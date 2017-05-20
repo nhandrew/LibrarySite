@@ -38,6 +38,13 @@ ul {
     margin-top:15px;
 }
 
+.main-left img{
+    width:50%;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
 #div-catalog {
     display:block;
     overflow:scroll;
@@ -113,11 +120,11 @@ ul {
   transform: rotateX(-90deg);
 }
 
-hr.style17 {
+hr {
 	border-top: 1px solid #8c8b8b;
 	text-align: center;
 }
-hr.style17:after {
+hr:after {
 	content: '§';
 	display: inline-block;
 	position: relative;
@@ -130,3 +137,4 @@ hr.style17:after {
 	-moz-transform: rotate(60deg);
 	transform: rotate(60deg);
 }
+

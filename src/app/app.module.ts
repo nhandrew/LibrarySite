@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import {routing} from './app.routing';
 
 import { AlertModule,CarouselModule } from 'ng2-bootstrap';
-import {TabMenuModule,MenuItem,DataTableModule,SharedModule,EditorModule,GalleriaModule,ScheduleModule} from 'primeng/primeng';
+import {TabMenuModule,MenuItem,DataTableModule,SharedModule,EditorModule,GalleriaModule,ScheduleModule,DialogModule,CalendarModule,CheckboxModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -39,6 +39,9 @@ import { HistoryComponent } from './components/history/history.component';
     EditorModule,
     GalleriaModule,
     ScheduleModule,
+    DialogModule,
+    CalendarModule,
+    CheckboxModule,
     routing
   ],
   providers: [],
