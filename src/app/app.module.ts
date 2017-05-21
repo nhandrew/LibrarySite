@@ -6,6 +6,7 @@ import {routing} from './app.routing';
 
 import { AlertModule,CarouselModule } from 'ng2-bootstrap';
 import {TabMenuModule,MenuItem,DataTableModule,SharedModule,EditorModule,GalleriaModule,ScheduleModule,DialogModule,CalendarModule,CheckboxModule} from 'primeng/primeng';
+import { FacebookModule } from 'ngx-facebook';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +16,8 @@ import { ProgramsComponent } from './components/programs/programs.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { HistoryComponent } from './components/history/history.component';
+import { FacebookeventsComponent } from './components/facebookevents/facebookevents.component';
+import { FacebookpostsComponent } from './components/facebookposts/facebookposts.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { HistoryComponent } from './components/history/history.component';
     ProgramsComponent,
     ResourcesComponent,
     CatalogComponent,
-    HistoryComponent
+    HistoryComponent,
+    FacebookeventsComponent,
+    FacebookpostsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,7 @@ import { HistoryComponent } from './components/history/history.component';
     HttpModule,
     AlertModule.forRoot(),
     CarouselModule.forRoot(),
+    FacebookModule,
     TabMenuModule,
     DataTableModule,
     SharedModule,
