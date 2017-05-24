@@ -1,7 +1,9 @@
     export class Event {
-    id: number;
-    title: string;
-    start: string;
-    end: string;
-    allDay: boolean = true;
+    public id?: number;
+    public title?: string="Title";
+    public start?: Date;
+    public end?: Date;
+    public allDay?: boolean;
+    public imageObject?:any[];
+    public description?:string;
 }

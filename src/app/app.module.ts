@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import {routing} from './app.routing';
 
 import { AlertModule,CarouselModule } from 'ng2-bootstrap';
-import {TabMenuModule,MenuItem,DataTableModule,SharedModule,EditorModule,GalleriaModule,ScheduleModule,DialogModule,CalendarModule,CheckboxModule} from 'primeng/primeng';
+import {TabMenuModule,MenuItem,DataTableModule,SharedModule,EditorModule,GalleriaModule,ScheduleModule,DialogModule,CalendarModule,CheckboxModule,PanelModule} from 'primeng/primeng';
 import { FacebookModule } from 'ngx-facebook';
 
 import { AppComponent } from './app.component';
@@ -48,6 +48,7 @@ import { FacebookpostsComponent } from './components/facebookposts/facebookposts
     DialogModule,
     CalendarModule,
     CheckboxModule,
+    PanelModule,
     routing
   ],
   providers: [],

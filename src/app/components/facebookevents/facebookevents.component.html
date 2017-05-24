@@ -1,7 +1,22 @@
-<div *ngFor="let event of events">
-    <div *ngIf="event.start_time > today">
-    <h2>{{event.name}}</h2>
-    <h2>{{event.start_time}}</h2>
+
+<div  class="media">
+    <div *ngFor="let event of events ">
+        <div *ngIf="event.start_time > today">
+            <div class="media-left">
+                <a href="#">
+                <img class="media-object" src="{{event.picture.data.url}}" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{event.name}}</h4>
+                <h5> {{event.start_time| date:'EEEE, MMMM d, j'}} </h5>
+                <p>{{event.description}}</p>
+            </div>
+            <br>
+            <br>
+        </div>
+        
     </div>
-  
 </div>
+
+  

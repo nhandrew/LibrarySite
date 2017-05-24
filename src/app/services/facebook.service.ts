@@ -24,8 +24,17 @@ export class FacebookService {
    }
 
     getEvents(pageName: string): Observable<any[]> {
-    this.graphQuery = `?access_token=${this.accessToken}&date_format=U&fields=events{description,end_time,start_time,name}`;
+    this.graphQuery = `?access_token=${this.accessToken}&date_format=U&fields=events{description,end_time,start_time,name,picture{url},cover{source}}`;
     let url = this.graphUrl + pageName + this.graphQuery;
+
+    return this.http
+        .get(url)
+        .map(response => response.json().events.data);
+   }
+
+   getEvent(eventId: string): Observable<any[]> {
+       this.graphQuery = `?access_token=${this.accessToken}&date_format=U&fields=picture{url},description,name,cover{source},start_time,end_time`;
+    let url = this.graphUrl + eventId + this.graphQuery;
 
     return this.http
         .get(url)

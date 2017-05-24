@@ -22,8 +22,7 @@ export class FacebookeventsComponent implements OnInit {
       this.today=new Date().toISOString();
 
       this.fb.getEvents('alburghpubliclibrary').subscribe(
-      res => {this.events=res
-        console.log(this.events)
+      res => {this.events=res.slice().reverse();
       },
       error =>console.log(error)
     );

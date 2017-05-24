@@ -1,34 +1,25 @@
 <h1>Programs and Events</h1>
-
+<hr />
 
 <p-schedule [events]="events" [header]="header" [eventLimit]="4" [editable]="true"
             (onDayClick)="handleDayClick($event)" (onEventClick)="handleEventClick($event)"></p-schedule>
 
 
-<p-dialog header="Event Details" [(visible)]="dialogVisible" [responsive]="true" showEffect="fade" [modal]="false" [contentStyle]="{'overflow':'visible'}"
-    [style]="{'overflow':'visible'}" [resizable]="false">
-    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="event">
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-4"><label for="vin">Title</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="title" [(ngModel)]="event.title" /></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-4"><label for="start">Start</label></div>
-            <div class="ui-grid-col-8"><p-calendar [(ngModel)]="event.start" dateFormat="yy-mm-dd" dataType="string"></p-calendar></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-4"><label for="end">End</label></div>
-            <div class="ui-grid-col-8"><p-calendar [(ngModel)]="event.end" dateFormat="yy-mm-dd" dataType="string"></p-calendar></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-4"><label for="allday">All Day</label></div>
-            <div class="ui-grid-col-8"><p-checkbox [(ngModel)]="event.allDay" binary="checkbox"></p-checkbox></div>
-        </div>
+<p-dialog [(visible)]="dialogVisible" showEffect="fade"  >
+    <div *ngIf="event">
+        
+      <div class="media-left">
+        <a href="#">
+        <img class="media-object" src="{{event.imageObject.source}}" style="width:150px;" alt="...">
+        </a>
     </div>
-    <p-footer>
-        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
-            <button type="button" pButton icon="fa-close" (click)="deleteEvent()" label="Delete" [disabled]="!event?.id"></button>
-            <button type="button" pButton icon="fa-check" (click)="saveEvent()" label="Save" [disabled]="!event?.start"></button>
-        </div>
-    </p-footer>
+    <div class="media-body" style="width:200px;" >
+        <h4 class="media-heading">{{event.title}}</h4>
+        <h5> {{event.start| date:'EEEE, MMMM, d j'}} <span *ngIf="event.end"> - {{event.end| date:'j'}}</span> </h5> <h5 *ngIf="event.end">  </h5>
+        <p>{{event.description}}</p>
+    </div>
+       
+
+    </div>
+
 </p-dialog>
